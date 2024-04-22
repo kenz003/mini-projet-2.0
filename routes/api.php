@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\Api\EleveController ;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+// Route::get('eleves', [EleveController::class, 'index']);
+// Route::post('eleves', [EleveController::class, 'store']);
+// Route::get('eleves/{id}', [EleveController::class, 'show']);
+// Route::put('eleves/{id}/edit', [EleveController::class, 'update']);
+// Route::delete('eleves/{eleve}/delete', [EleveController::class, 'destroy']);
+
+// Route::get('/', [EleveController::class,]);
+
+// on peut utilser cette methode aussi 
+Route::resource('eleves', EleveController::class);
+
+
+ 
