@@ -1,7 +1,8 @@
 <template>
+  <NavbarVue/>
+  
     
   
-    <NavbarVue/>
     <br> <br>
     <div class="overflow-x-auto">
         <table class="table">
@@ -36,6 +37,9 @@
             </tr>
         </tbody>
         </table>
+      </div>
+      <div class="navbar-end">
+        <router-link class="btn"  to="/add">Add student</router-link>
       </div>
     
     
