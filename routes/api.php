@@ -18,12 +18,15 @@ use \App\Http\Controllers\Api\EleveController ;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+//the crud routes
 Route::get('eleves', [EleveController::class, 'index']);
 Route::post('eleves', [EleveController::class, 'store']);
 Route::get('eleves/{id}', [EleveController::class, 'show']);
 Route::put('eleves/{id}/edit', [EleveController::class, 'update']);
 Route::delete('eleves/{eleve}/delete', [EleveController::class, 'destroy']);
 
+//search route
+Route::get('eleves/search/{name}', [EleveController::class, 'search']);
 Route::get('/', [EleveController::class,]);
 
 // on peut utilser cette methode aussi 

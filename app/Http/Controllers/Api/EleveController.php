@@ -204,4 +204,10 @@ class EleveController extends Controller
         }
         
     }
+
+    public function search( $name)
+    {
+        return Eleve::where('name', 'like', '%' . $name . '%')->get();
+    }
+
 }
