@@ -5,10 +5,16 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <button class="btn btn-active">Default</button>
+<button class="btn btn-active btn-neutral">Neutral</button>
+<button class="btn btn-active btn-primary">Primary</button>
+<button class="btn btn-active btn-secondary">Secondary</button>
+<button class="btn btn-active btn-accent">Accent</button>
+<button class="btn btn-active btn-ghost">Ghost</button>
+<button class="btn btn-active btn-link">Link</button>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
