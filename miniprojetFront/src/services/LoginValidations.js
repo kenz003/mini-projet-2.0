@@ -1,5 +1,5 @@
 // Importer la classe validations depuis validation.js
-import Validations from './validations';
+import Validations from './Validations';
 
 // Exporter la classe LoginValidations
 export default class LoginValidations {
