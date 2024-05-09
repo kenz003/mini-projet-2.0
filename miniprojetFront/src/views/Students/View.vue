@@ -38,9 +38,11 @@
         </tbody>
         </table>
       </div>
-      <div class="navbar-end">
-        <router-link class="btn"  to="/add">Add student</router-link>
-      </div>
+      <div>
+        <div class="navbar-end">
+            <router-link class="btn" to="/add">Add student</router-link>
+        </div>
+    </div>
     
     
   </template>
@@ -65,9 +67,10 @@ import axios from 'axios';
         this.getStudent();
     },
     methods: {
-        getStudent(){
-            axios.get('').then(res=> {
-                this.student = res.eleves.eleves;
+        async getStudent(){
+            await axios.get('http://127.0.0.1:8000/api/eleves').then(res=> {
+                this.students = res.data.eleves;
+                console.log(res.data.eleves)
             });
         }
     }
